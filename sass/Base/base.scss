@@ -1,0 +1,17 @@
+body,html {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.header, .footer{
+    &__logo{
+    font-family: "Shrikhand", "cursive";
+    text-align: center;
+    margin: 0;
+        &--lefted{
+            text-align: left;
+        }
+    }
+}
