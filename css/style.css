@@ -1,1 +1,51 @@
-@import"https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap";@import'https://kit.fontawesome.com/158c254b57.js" crossorigin="anonymous';body,html{box-sizing:border-box;margin:0;font-family:"Roboto",sans-serif;scroll-behavior:smooth}.header__logo,.footer__logo{font-family:"Shrikhand","cursive";text-align:center;margin:0}.header__logo--lefted,.footer__logo--lefted{text-align:left}/*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+@import url('https://kit.fontawesome.com/158c254b57.js" crossorigin="anonymous');
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  color: white;
+  background-color: #353535;
+  margin: auto;
+}
+.footer__logo {
+  font-family: "Shrikhand", "cursive";
+  font-size: 1.2rem;
+  margin: 0.5rem 0 1rem 0.3rem;
+}
+.footer__logo--lefted {
+  text-align: left;
+}
+.footer__list {
+  list-style: none;
+  width: 100%;
+  margin: 0.4rem;
+}
+.footer__icon {
+  width: 1.2rem;
+  margin-right: 0.5rem;
+}
+.footer__link {
+  color: #fff;
+  text-decoration: none;
+}
+.footer__link :visited {
+  color: white;
+}
+.footer__link :hover {
+  text-decoration: underline;
+}
+
+body, html {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.header__logo {
+  font-family: "Shrikhand", "cursive";
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */
