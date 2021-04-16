@@ -1,5 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
 @import url('https://kit.fontawesome.com/158c254b57.js" crossorigin="anonymous');
+/*Colors chart*/
+/*Loader*/
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -2;
+  }
+}
+@keyframes bars {
+  0% {
+    transform: scaleY(0);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+}
 .footer {
   display: flex;
   flex-direction: column;
@@ -46,6 +68,57 @@ body, html {
 .header__logo {
   font-family: "Shrikhand", "cursive";
   text-align: center;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  /*align-items: center;*/
+  padding-top: 200px;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  animation: loader 0.01s both 3500ms;
+  background-color: rgba(255, 255, 255, 0.952);
+}
+
+.load {
+  display: flex;
+  width: 24vh;
+  height: 12vh;
+  justify-content: space-evenly;
+}
+.load__bar {
+  height: 100%;
+  width: 3vh;
+  border-radius: 50px;
+  animation: bars 2200ms both 1 ease-in-out alternate;
+}
+.load__bar--1 {
+  background-color: #9356DC;
+  animation-delay: 244.4444444444ms;
+}
+.load__bar--2 {
+  background-color: #9356DC;
+  animation-delay: 488.8888888889ms;
+}
+.load__bar--3 {
+  background-color: #FF79DA;
+  animation-delay: 733.3333333333ms;
+}
+.load__bar--4 {
+  background-color: #FF79DA;
+  animation-delay: 977.7777777778ms;
+}
+.load__bar--5 {
+  background-color: #99E2D0;
+  animation-delay: 1222.2222222222ms;
+}
+.load__bar--6 {
+  background-color: #99E2D0;
+  animation-delay: 1466.6666666667ms;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,3 +1,9 @@
+/*Colors chart*/
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
+/*Loader*/
+$loadbarsize: 3vh;
+$num-loadbars: 9;
+$loader-dur: 2200ms;
+$loadbar-delay: $loader-dur / $num-loadbars;
