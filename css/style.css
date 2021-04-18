@@ -64,10 +64,19 @@ body, html {
   font-family: "Roboto", sans-serif;
   scroll-behavior: smooth;
 }
+body a, html a {
+  text-decoration: none;
+}
 
 .header__logo {
   font-family: "Shrikhand", "cursive";
   text-align: center;
+  color: black;
+  /*text-decoration: none;*/
+  /*& a:visited{
+      color: black;
+      text-decoration: none;
+      }*/
 }
 
 .loader {
