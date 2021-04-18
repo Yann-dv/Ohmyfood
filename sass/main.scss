@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
 @import url('https://kit.fontawesome.com/158c254b57.js" crossorigin="anonymous');
 @import "./utils/variables";
+@import "./utils/mixin";
 @import "./utils/keyframes";
+@import "./pages/accueil";
 @import "./layout/footer";
 @import "./base/base";
 @import "./components/loader";

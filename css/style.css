@@ -22,6 +22,44 @@
     opacity: 0;
   }
 }
+.local {
+  text-align: center;
+  background-color: #eaeaea;
+  padding: 0.7rem;
+  box-shadow: inset 0px 3px 2px rgba(0, 0, 0, 0.25);
+}
+
+.reserve {
+  background-color: #F6F6F6;
+  text-align: center;
+  padding: 1rem;
+  padding-bottom: 3rem;
+}
+.reserve p {
+  margin-bottom: 2.5rem;
+}
+.reserve__button {
+  border: 0;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-radius: 100px;
+  color: white;
+  background-color: #686868;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9) 0%, rgba(255, 121, 218, 0.9) 100%);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+}
+.reserve__button:hover {
+  background-color: white;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+}
+.reserve__button a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -63,20 +101,27 @@ body, html {
   margin: 0;
   font-family: "Roboto", sans-serif;
   scroll-behavior: smooth;
+  font-size: 18px;
 }
 body a, html a {
   text-decoration: none;
 }
 
+.hidden {
+  display: none;
+}
+
 .header__logo {
   font-family: "Shrikhand", "cursive";
-  text-align: center;
   color: black;
-  /*text-decoration: none;*/
-  /*& a:visited{
-      color: black;
-      text-decoration: none;
-      }*/
+  text-align: center;
+}
+.header__arrow {
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  font-size: 20px;
+  color: black;
 }
 
 .loader {
@@ -89,7 +134,7 @@ body a, html a {
   position: fixed;
   left: 0;
   top: 0;
-  animation: loader 0.01s both 3500ms;
+  animation: loader 0.01s both 2500ms;
   background-color: rgba(255, 255, 255, 0.952);
 }
 
@@ -103,31 +148,31 @@ body a, html a {
   height: 100%;
   width: 3vh;
   border-radius: 50px;
-  animation: bars 2200ms both 1 ease-in-out alternate;
+  animation: bars 1500ms both 1 ease-in-out alternate;
 }
 .load__bar--1 {
   background-color: #9356DC;
-  animation-delay: 244.4444444444ms;
+  animation-delay: 166.6666666667ms;
 }
 .load__bar--2 {
   background-color: #9356DC;
-  animation-delay: 488.8888888889ms;
+  animation-delay: 333.3333333333ms;
 }
 .load__bar--3 {
   background-color: #FF79DA;
-  animation-delay: 733.3333333333ms;
+  animation-delay: 500ms;
 }
 .load__bar--4 {
   background-color: #FF79DA;
-  animation-delay: 977.7777777778ms;
+  animation-delay: 666.6666666667ms;
 }
 .load__bar--5 {
   background-color: #99E2D0;
-  animation-delay: 1222.2222222222ms;
+  animation-delay: 833.3333333333ms;
 }
 .load__bar--6 {
   background-color: #99E2D0;
-  animation-delay: 1466.6666666667ms;
+  animation-delay: 1000ms;
 }
 
 /*# sourceMappingURL=style.css.map */
