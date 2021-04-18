@@ -17,3 +17,48 @@
         @include button($primary-color);
     }
 }
+
+.instruct{
+    margin: 0;
+    & h2{
+        padding: 1rem;
+    }
+    & ol {
+        list-style: none; counter-reset: li
+    }
+    & li::before {
+        content: counter(li); color: white;
+        background-color: $primary-color;
+        border-radius: 100px;
+        display: flex;
+        width: 1.5rem;
+        height: 1.5rem;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        left: -.75rem;
+    }
+    & li {
+        counter-increment: li;
+    }
+    &__icon{
+        display: flex;
+        padding-right: 1rem;
+        align-items: center;
+        justify-content: center;
+        color: $instructicon;
+        margin-top: .2rem;
+    }
+    &__text{
+        margin-top: .1rem;
+    }
+    &__step{
+        display: flex;
+        border-radius: 20px;
+        background-color: $bkgdgrey;
+        padding: 1.5rem 1.5rem 1.5rem 0;
+        margin-right: 1rem;
+        margin-top: 1rem;
+        box-shadow: .25rem .25rem .5rem rgba(0,0,0,.125);
+    }
+}
