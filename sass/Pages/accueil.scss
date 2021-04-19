@@ -1,5 +1,3 @@
-@use "sass:color";
-
 .local{
     text-align: center;
     background-color: $bkgdlocal;
@@ -21,7 +19,7 @@
 }
 
 .instruct{
-    margin: 0;
+    margin-bottom: 4rem;
     & h2{
         padding: 1rem;
     }
@@ -69,5 +67,25 @@
                 color: $primary-color;
             }
         }
+    }
+}
+
+.restaurants{
+    background-color: $bkgdgrey;
+
+    .cards{
+        a {
+            text-decoration: none;
+            color: black;
+          }
+    .card{
+        &__badge{
+            background-color: $tertiary-color;
+            color: #008766;
+            margin: .5rem;
+            padding: .5rem;
+            float: right;
+        }
+    }
     }
 }

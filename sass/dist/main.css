@@ -61,7 +61,7 @@
 }
 
 .instruct {
-  margin-bottom: 4rem;
+  margin: 0;
 }
 .instruct h2 {
   padding: 1rem;
@@ -117,11 +117,11 @@
 .restaurants {
   background-color: #F6F6F6;
 }
-.restaurants .cards a {
+.restaurants .card a {
   text-decoration: none;
-  color: black;
+  color: inherit;
 }
-.restaurants .cards .card__badge {
+.restaurants .card__badge {
   background-color: #99E2D0;
   color: #008766;
   margin: 0.5rem;
@@ -243,5 +243,3 @@ body a, html a {
   background-color: #99E2D0;
   animation-delay: 1000ms;
 }
-
-/*# sourceMappingURL=style.css.map */
