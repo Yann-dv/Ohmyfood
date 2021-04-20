@@ -8,7 +8,7 @@
   border-radius: 100px;
   color: white;
   background-color: rgb(104, 104, 104);
-  background-image: linear-gradient(0deg, color.scale($primary-color, $alpha: -10%) 0%, color.scale($secondary-color, $alpha: -10%) 100%);
+  background-image: linear-gradient(0deg, color.scale($secondary-color, $alpha: -10%) 0%, color.scale($primary-color, $alpha: -10%) 100%);
   cursor: pointer;
   transition-duration: 0.3s;
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
@@ -24,16 +24,29 @@
   }
 }
 
-@mixin hover($color) {
-  @if (hue($color) < 180){
-    $color: adjust-hue($color, 30);
-  }@else{
-    $color: adjust-hue($color, -60);
-  }
-  background-color: $color;
-}
-
 @mixin itemslayout{
   box-shadow: .25rem .25rem .5rem rgba(0,0,0,.125);
   border-radius: 20px;
+}
+
+@mixin pinkgradient{
+  background: -webkit-linear-gradient(0deg, color.scale($secondary-color, $alpha: -10%) 0%, color.scale($primary-color, $alpha: -10%) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin like{
+  &__like{
+    cursor: pointer;
+    &:hover{
+      font-weight: 600;
+      transition-duration: .5s;
+      @include pinkgradient;
+    }
+    &::selection{
+      font-weight: 600;
+      transition-duration: .1s;
+      @include pinkgradient;
+    }
+}
 }
