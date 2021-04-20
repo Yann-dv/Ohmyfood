@@ -32,3 +32,8 @@
   }
   background-color: $color;
 }
+
+@mixin itemslayout{
+  box-shadow: .25rem .25rem .5rem rgba(0,0,0,.125);
+  border-radius: 20px;
+}

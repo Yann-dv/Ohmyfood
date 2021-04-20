@@ -2,6 +2,7 @@
 @import url('https://kit.fontawesome.com/158c254b57.js" crossorigin="anonymous');
 /*Colors chart*/
 /*Loader*/
+/*Images sizes*/
 @keyframes loader {
   100% {
     opacity: 0;
@@ -60,12 +61,6 @@
   color: inherit;
 }
 
-.instruct {
-  margin-bottom: 4rem;
-}
-.instruct h2 {
-  padding: 1rem;
-}
 .instruct ol {
   list-style: none;
   counter-reset: li;
@@ -100,12 +95,12 @@
 .instruct__step {
   cursor: pointer;
   display: flex;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
   border-radius: 20px;
   background-color: #F6F6F6;
   padding: 1.5rem 1.5rem 1.5rem 0;
   margin-right: 1rem;
   margin-top: 1rem;
-  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
 }
 .instruct__step:hover {
   background-color: #f5edff;
@@ -116,17 +111,38 @@
 
 .restaurants {
   background-color: #F6F6F6;
+  display: flex;
+  flex-direction: column;
 }
-.restaurants .cards a {
+.restaurants__card {
+  position: relative;
+  background-color: white;
   text-decoration: none;
   color: black;
+  margin: 1rem;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+  border-radius: 20px;
 }
-.restaurants .cards .card__badge {
+
+.card__badge {
   background-color: #99E2D0;
   color: #008766;
   margin: 0.5rem;
   padding: 0.5rem;
-  float: right;
+  position: absolute;
+  right: 2%;
+  top: 1.5%;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+  border-radius: 5px;
+}
+.card__img {
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+  max-height: 232px;
+  max-width: 100%;
+}
+.card__footer {
+  padding: 1rem;
 }
 
 .footer {
@@ -191,6 +207,13 @@ body a, html a {
   top: 5%;
   font-size: 20px;
   color: black;
+}
+
+.instruct, .restaurants {
+  padding-bottom: 4rem;
+}
+.instruct h2, .restaurants h2 {
+  padding: 1rem;
 }
 
 .loader {

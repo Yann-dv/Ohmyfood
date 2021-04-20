@@ -19,10 +19,6 @@
 }
 
 .instruct{
-    margin-bottom: 4rem;
-    & h2{
-        padding: 1rem;
-    }
     & ol {
         list-style: none; counter-reset: li;
     }
@@ -55,12 +51,11 @@
     &__step{
         cursor: pointer;
         display: flex;
-        border-radius: 20px;
+        @include itemslayout;
         background-color: $bkgdgrey;
         padding: 1.5rem 1.5rem 1.5rem 0;
         margin-right: 1rem;
         margin-top: 1rem;
-        box-shadow: .25rem .25rem .5rem rgba(0,0,0,.125);
         &:hover {
             background-color: #f5edff;
             & > .instruct__icon{
@@ -72,20 +67,36 @@
 
 .restaurants{
     background-color: $bkgdgrey;
-
-    .cards{
-        a {
-            text-decoration: none;
-            color: black;
-          }
-    .card{
-        &__badge{
-            background-color: $tertiary-color;
-            color: #008766;
-            margin: .5rem;
-            padding: .5rem;
-            float: right;
+    display: flex;
+    flex-direction: column;
+    &__card{
+        position: relative;
+        background-color: white;
+        text-decoration: none;
+        color: black;
+        margin: 1rem;
+        @include itemslayout;
         }
     }
+.card{
+    &__badge{
+        background-color: $tertiary-color;
+        color: #008766;
+        margin: .5rem;
+        padding: .5rem;
+        position: absolute;
+        right: 2%;
+        top: 1.5%;
+        box-shadow: .25rem .25rem .5rem rgba(0,0,0,.125);
+        border-radius: 5px;
+    }
+    &__img{
+        object-fit: cover;
+        border-radius: 20px 20px 0 0;
+        max-height: $imgheight;
+        max-width: $imgwidth;
+    }
+    &__footer{
+        padding: 1rem;
     }
 }
