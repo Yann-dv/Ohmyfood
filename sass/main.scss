@@ -4,11 +4,8 @@
 @import "./utils/mixin";
 @import "./utils/keyframes";
 @import "./pages/accueil";
+@import "./pages/a-la-francaise";
 @import "./layout/footer";
+@import "./layout/header";
 @import "./base/base";
 @import "./components/loader";
-
-@font-face {
-    font-family: "Font Awesome 5 Free-Regular-400";
-    src: url(../fonts/Font%20Awesome%205%20Free-Regular-400.otf) format("opentype");
-}

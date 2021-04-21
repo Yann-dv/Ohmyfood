@@ -38,22 +38,13 @@
 @mixin like {
   &__like{
     cursor: pointer;
-    &.checked {
+    /*&.checked {
       display: none;
-    }
+    }*/
     &:hover{
       font-weight: 600;
       transition-duration: .5s;
       @include pinkgradient;
     }
-    /*&[type="checkbox"]:checked {
-      .checked {
-        @include pinkgradient;
-        display: contents;
-      }
-      .unchecked {
-        display: none;
-      }
-    }*/
   }
 }

@@ -1,0 +1,23 @@
+.header{
+    display: flex;
+    flex-direction: column;
+    &__logo{
+    font-family: "Shrikhand", "cursive";
+    color: black;
+    text-align: center;
+    }
+
+    &__arrow{
+        position:absolute;
+        left: 5%;
+        top: 5%;
+        font-size: 20px;
+        color: black;
+    }
+    &__img {
+        object-fit: cover;
+        max-height: $imgheight;
+        width: $imgwidth;
+
+    }
+}
