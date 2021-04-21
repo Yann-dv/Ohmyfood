@@ -1,29 +1,34 @@
-.local{
+.local {
     text-align: center;
     background-color: $bkgdlocal;
     padding: .7rem;
-    box-shadow: inset 0px 3px 2px rgba(0,0,0,.25);
+    box-shadow: inset 0px 3px 2px rgba(0, 0, 0, .25);
 }
 
-.reserve{
+.reserve {
     background-color: $bkgdgrey;
     text-align: center;
     padding: 1rem;
     padding-bottom: 3rem;
+
     & p {
-    margin-bottom: 2.5rem;
+        margin-bottom: 2.5rem;
     }
-    &__button{
+
+    &__button {
         @include button($primary-color);
     }
 }
 
-.instruct{
+.instruct {
     & ol {
-        list-style: none; counter-reset: li;
+        list-style: none;
+        counter-reset: li;
     }
+
     & li::before {
-        content: counter(li); color: white;
+        content: counter(li);
+        color: white;
         background-color: $primary-color;
         border-radius: 100px;
         display: flex;
@@ -34,10 +39,12 @@
         position: relative;
         left: -.75rem;
     }
+
     & li {
         counter-increment: li;
     }
-    &__icon{
+
+    &__icon {
         display: flex;
         padding-right: 1rem;
         align-items: center;
@@ -45,10 +52,12 @@
         color: $instructicon;
         margin-top: .2rem;
     }
-    &__text{
+
+    &__text {
         margin-top: .1rem;
     }
-    &__step{
+
+    &__step {
         cursor: pointer;
         display: flex;
         @include itemslayout;
@@ -56,30 +65,34 @@
         padding: 1.5rem 1.5rem 1.5rem 0;
         margin-right: 1rem;
         margin-top: 1rem;
+
         &:hover {
             background-color: #f5edff;
-            & > .instruct__icon{
+
+            &>.instruct__icon {
                 color: $primary-color;
             }
         }
     }
 }
 
-.restaurants{
+.restaurants {
     background-color: $bkgdgrey;
     display: flex;
     flex-direction: column;
-    &__card{
+
+    &__card {
         position: relative;
         background-color: white;
         text-decoration: none;
         color: black;
         margin: 1rem;
         @include itemslayout;
-        }
     }
-.card{
-    &__badge{
+}
+
+.card {
+    &__badge {
         background-color: $tertiary-color;
         color: darken($tertiary-color, 50%);
         margin: .5rem;
@@ -87,30 +100,54 @@
         position: absolute;
         right: 2%;
         top: 1.5%;
-        box-shadow: .25rem .25rem .5rem rgba(0,0,0,.125);
+        box-shadow: .25rem .25rem .5rem rgba(0, 0, 0, .125);
         border-radius: 5px;
     }
-    &__img{
+
+    &__img {
         object-fit: cover;
         border-radius: 20px 20px 0 0;
         max-height: $imgheight;
         width: $imgwidth;
     }
-    &__footer{
+
+    &__footer {
         padding-left: 1rem;
-        & h3{
+
+        & h3 {
             margin-bottom: 6px;
         }
     }
-    &__subtitle{
+
+    &__subtitle {
         padding-bottom: 0;
         border: 0;
     }
-    &__btn{
+
+    &__btn {
         float: right;
         position: relative;
         bottom: 3rem;
         right: 2rem;
         @include like;
     }
+}
+
+/* Voir pour rendre le bouton checked/unchecked*/
+input[type="checkbox"] + label:before {
+    font-family: "Font Awesome 5 Free-Regular-400";
+}
+
+input[type="checkbox"]:not(:checked) + label:before {
+  content: "\f08a";
+  background: blue;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+input[type="checkbox"]:checked + label:before {
+   content: "\f004";
+}
+input[type=checkbox] {
+    display: none;
 }

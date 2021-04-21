@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
 @import url('https://kit.fontawesome.com/158c254b57.js" crossorigin="anonymous');
 /*Colors chart*/
@@ -159,6 +160,18 @@
 }
 .card__btn__like {
   cursor: pointer;
+  /*&[type="checkbox"]:checked {
+    .checked {
+      @include pinkgradient;
+      display: contents;
+    }
+    .unchecked {
+      display: none;
+    }
+  }*/
+}
+.card__btn__like.checked {
+  display: none;
 }
 .card__btn__like:hover {
   font-weight: 600;
@@ -167,12 +180,24 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.card__btn__like::selection {
-  font-weight: 600;
-  transition-duration: 0.1s;
-  background: -webkit-linear-gradient(0deg, rgba(255, 121, 218, 0.9) 0%, rgba(147, 86, 220, 0.9) 100%);
+
+input[type=checkbox] + label:before {
+  font-family: "Font Awesome 5 Free-Regular-400";
+}
+
+input[type=checkbox]:not(:checked) + label:before {
+  content: "";
+  background: blue;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+input[type=checkbox]:checked + label:before {
+  content: "";
+}
+
+input[type=checkbox] {
+  display: none;
 }
 
 .footer {
@@ -295,6 +320,11 @@ body a, html a {
 .load__bar--6 {
   background-color: #99E2D0;
   animation-delay: 1000ms;
+}
+
+@font-face {
+  font-family: "Font Awesome 5 Free-Regular-400";
+  src: url(../fonts/Font%20Awesome%205%20Free-Regular-400.otf) format("opentype");
 }
 
 /*# sourceMappingURL=style.css.map */

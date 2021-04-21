@@ -35,18 +35,25 @@
   -webkit-text-fill-color: transparent;
 }
 
-@mixin like{
+@mixin like {
   &__like{
     cursor: pointer;
+    &.checked {
+      display: none;
+    }
     &:hover{
       font-weight: 600;
       transition-duration: .5s;
       @include pinkgradient;
     }
-    &::selection{
-      font-weight: 600;
-      transition-duration: .1s;
-      @include pinkgradient;
-    }
-}
+    /*&[type="checkbox"]:checked {
+      .checked {
+        @include pinkgradient;
+        display: contents;
+      }
+      .unchecked {
+        display: none;
+      }
+    }*/
+  }
 }
