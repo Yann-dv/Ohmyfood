@@ -88,6 +88,7 @@
         color: black;
         margin: 1rem;
         @include itemslayout;
+        @include scale01;
     }
 }
 
@@ -132,22 +133,3 @@
         @include like;
     }
 }
-
-/* Voir pour rendre le bouton checked/unchecked*/
-/*input[type="checkbox"] + label:before {
-    font-family: "Font Awesome 5 Free-Regular-400";
-}
-
-input[type="checkbox"]:not(:checked) + label:before {
-  content: "\f08a";
-  background: blue;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-input[type="checkbox"]:checked + label:before {
-   content: "\f004";
-}
-input[type=checkbox] {
-    display: none;
-}*/

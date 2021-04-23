@@ -24,13 +24,22 @@
   }
 }
 
+@mixin scale01 {
+  &:hover {
+    transform: scale(1.01);
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+  }
+}
+
 @mixin itemslayout{
   box-shadow: .25rem .25rem .5rem rgba(0,0,0,.125);
   border-radius: 20px;
 }
 
 @mixin pinkgradient{
-  background: -webkit-linear-gradient(0deg, color.scale($secondary-color, $alpha: -10%) 0%, color.scale($primary-color, $alpha: -10%) 100%);
+  background: -webkit-linear-gradient(color.scale($primary-color, $alpha: -10%) 0%, color.scale($secondary-color, $alpha: -10%) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -38,12 +47,17 @@
 @mixin like {
   &__like{
     cursor: pointer;
-    /*&.checked {
-      display: none;
-    }*/
-    &:hover{
+    &::before {
+      content: "";
+    }
+    &:hover:before{
+      font-weight: bold;
+      transition-duration: .7s;
+      @include pinkgradient;
+    }
+    &:active{
       font-weight: 600;
-      transition-duration: .5s;
+      transition-duration: .1s;
       @include pinkgradient;
     }
   }
