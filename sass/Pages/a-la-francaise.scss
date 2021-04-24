@@ -21,6 +21,7 @@ position: relative;
 background-color: #fff;
 padding: 1rem;
 display: flex;
+flex-direction: column;
 border-radius: .75rem;
 margin: 1rem 0;
 box-shadow: .25rem .25rem 1rem rgba(0,0,0,.1);
@@ -28,10 +29,18 @@ overflow: hidden;
 cursor: pointer;
 @include scale01;
 
+&__name {
+    padding-bottom: 1rem;
+}
 &__price {
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+    float: right;
+    width: 2rem;
+    font-weight: bold;
+    position: absolute;
+    right: 2rem;
+    top: 3rem;
+
  }
 }
 }

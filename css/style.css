@@ -225,6 +225,7 @@
   background-color: #fff;
   padding: 1rem;
   display: flex;
+  flex-direction: column;
   border-radius: 0.75rem;
   margin: 1rem 0;
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
@@ -237,10 +238,17 @@
   -o-transition: 0.4s;
   transition: 0.4s;
 }
+.menu__items__name {
+  padding-bottom: 1rem;
+}
 .menu__items__price {
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
+  float: right;
+  width: 2rem;
+  font-weight: bold;
+  position: absolute;
+  right: 2rem;
+  top: 3rem;
 }
 
 .footer {
