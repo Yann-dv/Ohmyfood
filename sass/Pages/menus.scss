@@ -1,3 +1,23 @@
+.shrikfont {
+    font-family: "Shrikhand", "cursive";
+}
+
+.upper {
+    position: relative;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding-bottom: .5rem;
+    &::after {
+        content: "";
+        width: 3rem;
+        height: 0.25rem;
+        background-color: $tertiary-color;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+}
+
 .menu__btn {
     float: right;
     position: relative;
@@ -28,9 +48,16 @@ box-shadow: .25rem .25rem 1rem rgba(0,0,0,.1);
 overflow: hidden;
 cursor: pointer;
 @include scale01;
+white-space: nowrap;
+text-overflow: ellipsis;
+overflow: hidden;
 
 &__name {
-    padding-bottom: 1rem;
+    padding-bottom: .5rem;
+    font-weight: bold;
+}
+&__desc {
+    font-size: 16px;
 }
 &__price {
     display: flex;
@@ -38,9 +65,15 @@ cursor: pointer;
     width: 2rem;
     font-weight: bold;
     position: absolute;
-    right: 2rem;
-    top: 3rem;
+    right: .5rem;
+    top: 2.7rem;
 
  }
 }
+}
+
+.command {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 2rem 4rem;
 }
