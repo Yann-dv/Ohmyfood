@@ -26,14 +26,14 @@
 
 @mixin checked-btn {
   &:hover {
-  .menu__items__checking{
-    animation: checking-btn-anim .4s ease-in both;
+    .menu__items__checking {
+      animation: checking-btn-anim .4s ease-in both;
+    }
+
+    .menu__items__checked {
+      animation: checked-btn-anim .45s ease-in both;
+    }
   }
-  .menu__items__checked{
-    animation: checked-btn-anim .45s ease-in both;
-  }
-  
-}
 }
 
 @mixin scale01 {
@@ -45,29 +45,32 @@
   }
 }
 
-@mixin itemslayout{
-  box-shadow: .25rem .25rem .5rem rgba(0,0,0,.125);
+@mixin itemslayout {
+  box-shadow: .25rem .25rem .5rem rgba(0, 0, 0, .125);
   border-radius: 20px;
 }
 
-@mixin pinkgradient{
+@mixin pinkgradient {
   background: -webkit-linear-gradient(color.scale($primary-color, $alpha: -10%) 0%, color.scale($secondary-color, $alpha: -10%) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 @mixin like {
-  &__like{
+  &__like {
     cursor: pointer;
+
     &::before {
       content: "";
     }
-    &:hover:before{
+
+    &:hover:before {
       font-weight: bold;
       transition-duration: .7s;
       @include pinkgradient;
     }
-    &:active{
+
+    &:active {
       font-weight: 600;
       transition-duration: .1s;
       @include pinkgradient;
