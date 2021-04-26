@@ -24,6 +24,18 @@
   }
 }
 
+@mixin checked-btn {
+  &:hover {
+  .menu__items__checking{
+    animation: checking-btn-anim .4s ease-in both;
+  }
+  .menu__items__checked{
+    animation: checked-btn-anim .45s ease-in both;
+  }
+  
+}
+}
+
 @mixin scale01 {
   &:hover {
     transform: scale(1.01);
