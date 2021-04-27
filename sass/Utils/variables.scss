@@ -13,3 +13,7 @@ $loadbar-delay: $loader-dur / $num-loadbars;
 /*Images sizes*/
 $imgheight: 32rem;
 $imgwidth: 100%;
+/*Breakpoints*/
+$breakpoints: (
+  tablet: 768px
+);

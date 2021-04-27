@@ -18,5 +18,8 @@ body,html {
     padding-bottom: 4rem;
     & h2{
         padding: 1rem;
+        @include tablet-up{
+            width: 100%;
+            }
     }
 }

@@ -21,6 +21,10 @@
 }
 
 .instruct {
+    @include tablet-up {
+        flex-direction: row;
+    }
+
     & ol {
         list-style: none;
         counter-reset: li;
@@ -57,6 +61,12 @@
         margin-top: .1rem;
     }
 
+    &__steps {
+        @include tablet-up {
+            display: flex;
+        }
+    }
+
     &__step {
         cursor: pointer;
         display: flex;
@@ -66,13 +76,18 @@
         margin-right: 1rem;
         margin-top: 1rem;
 
-        &:hover {
-            background-color: #f5edff;
-
-            &>.instruct__icon {
-                color: $primary-color;
-            }
+        @include tablet-up {
+            margin-right: 1.5rem;
+            width: 30%;
         }
+
+    &:hover {
+        background-color: #f5edff;
+
+        &>.instruct__icon {
+            color: $primary-color;
+        }
+    }
     }
 }
 
@@ -80,6 +95,12 @@
     background-color: $bkgdgrey;
     display: flex;
     flex-direction: column;
+
+    @include tablet-up {
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
 
     &__card {
         position: relative;
@@ -89,6 +110,13 @@
         margin: 1rem;
         @include itemslayout;
         @include scale01;
+
+        @include tablet-up {
+            width: 45%;
+            height: 15rem;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
     }
 }
 
@@ -110,6 +138,10 @@
         border-radius: 20px 20px 0 0;
         max-height: $imgheight;
         width: $imgwidth;
+
+        @include tablet-up {
+            height: 65%;
+        }
     }
 
     &__footer {
