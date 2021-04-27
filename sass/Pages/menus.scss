@@ -25,9 +25,18 @@
     top: -3rem;
     right: 2rem;
     @include like;
+    @include mini-up {
+        right: .5rem;
+    }
+    @include smart-up {
+        right: 1rem;
+    }
 }
 
 .menu {
+    @include mini-up {
+        font-size: 12px;
+    }
 
     &__container {
         background-color: $bkgdgrey;
@@ -86,6 +95,12 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            @include mini-up {
+                font-size: 10px;
+            }
+            @include dlarge-up {
+                font-size: 20px;
+            }
         }
 
         &__price {

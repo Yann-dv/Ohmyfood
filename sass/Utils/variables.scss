@@ -11,9 +11,19 @@ $num-loadbars: 9;
 $loader-dur: 1200ms;
 $loadbar-delay: $loader-dur / $num-loadbars;
 /*Images sizes*/
-$imgheight: 32rem;
+$imgheight: 12rem;
 $imgwidth: 100%;
 /*Breakpoints*/
-$breakpoints: (
-  tablet: 768px
+$breakpoints-min: (
+  mini: 240px,
+  smart: 320px,
+  tablet: 768px,
+  desktop: 1024px,
+  dlarge: 1200px
+);
+$breakpoints-max: (
+  minix: 319px,
+  smartx: 767px,
+  tabletx: 1023px,
+  desktopx: 1199px,
 );

@@ -3,7 +3,15 @@ body,html {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     scroll-behavior: smooth;
+    @include smart-up {
     font-size: 18px;
+    }
+    @include mini-up {
+        font-size: 12px;
+    }
+    @include dlarge-up {
+        font-size: 24px;
+    }
     & a{
         text-decoration: none;
         color: black;
@@ -18,8 +26,11 @@ body,html {
     padding-bottom: 4rem;
     & h2{
         padding: 1rem;
-        @include tablet-up{
+        @include desktop-up{
             width: 100%;
             }
+        @include dlarge-up {
+            width: 100%;
+        }
     }
 }
