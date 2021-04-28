@@ -34,10 +34,6 @@
 }
 
 .menu {
-    @include mini-up {
-        font-size: 12px;
-    }
-
     &__container {
         background-color: $bkgdgrey;
         display: flex;
@@ -70,7 +66,6 @@
         overflow: hidden;
         cursor: pointer;
         @include checked-btn;
-        @include scale01;
 
         &__text {
             flex: 1;
@@ -91,16 +86,17 @@
 
         &__desc {
             margin: 0;
-            font-size: 16px;
+            font-size: 1.3vw;
+            @include mini-up {
+                font-size: 4.4vw;
+            }
+        
+            @include tablet-up {
+                font-size: 4.2vw;
+            }
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            @include mini-up {
-                font-size: 10px;
-            }
-            @include dlarge-up {
-                font-size: 20px;
-            }
         }
 
         &__price {
@@ -128,7 +124,7 @@
             align-items: center;
             color: $tertiary-color;
             background-color: white;
-            border-radius: 100px;
+            border-radius: 5rem;
 
         }
     }

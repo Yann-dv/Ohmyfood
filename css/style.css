@@ -96,9 +96,8 @@
 }
 .header__arrow {
   position: absolute;
-  left: 5%;
-  top: 5%;
-  font-size: 20px;
+  left: 1.5rem;
+  top: 2rem;
   color: black;
 }
 .header__img {
@@ -133,28 +132,35 @@
   }
 }
 
-body, html {
+body,
+html {
   box-sizing: border-box;
   margin: 0;
   font-family: "Roboto", sans-serif;
   scroll-behavior: smooth;
-}
-@media only screen and (min-width: 320px) and (max-width: 767px) {
-  body, html {
-    font-size: 18px;
-  }
+  /*Responsive font - auto resizing*/
+  font-size: 1.4vw;
 }
 @media only screen and (min-width: 240px) and (max-width: 319px) {
-  body, html {
-    font-size: 12px;
+  body,
+html {
+    font-size: 4.5vw;
   }
 }
-@media only screen and (min-width: 1200px) {
-  body, html {
-    font-size: 24px;
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  body,
+html {
+    font-size: 4.3vw;
   }
 }
-body a, html a {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  body,
+html {
+    font-size: 4.3vw;
+  }
+}
+body a,
+html a {
   text-decoration: none;
   color: black;
 }
@@ -163,19 +169,23 @@ body a, html a {
   display: none;
 }
 
-.instruct, .restaurants {
-  padding-bottom: 4rem;
+.instruct,
+.restaurants {
+  padding-bottom: 3rem;
 }
-.instruct h2, .restaurants h2 {
-  padding: 1rem;
+.instruct h2,
+.restaurants h2 {
+  padding: 1rem 0 0 1rem;
 }
 @media only screen and (min-width: 1024px) and (max-width: 1199px) {
-  .instruct h2, .restaurants h2 {
+  .instruct h2,
+.restaurants h2 {
     width: 100%;
   }
 }
 @media only screen and (min-width: 1200px) {
-  .instruct h2, .restaurants h2 {
+  .instruct h2,
+.restaurants h2 {
     width: 100%;
   }
 }
@@ -252,7 +262,7 @@ body a, html a {
   padding: 0.75rem 2rem;
   font-weight: 500;
   font-size: 1.1rem;
-  border-radius: 100px;
+  border-radius: 5rem;
   color: white;
   background-color: #686868;
   background-image: linear-gradient(0deg, rgba(255, 121, 218, 0.9) 0%, rgba(147, 86, 220, 0.9) 100%);
@@ -298,6 +308,7 @@ body a, html a {
 }
 .instruct li {
   counter-increment: li;
+  border-radius: 1.25rem;
 }
 .instruct__icon {
   display: flex;
@@ -324,7 +335,7 @@ body a, html a {
   cursor: pointer;
   display: flex;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
-  border-radius: 20px;
+  border-radius: 1rem;
   background-color: #F6F6F6;
   padding: 1.5rem 1.5rem 1.5rem 0;
   margin-right: 1rem;
@@ -375,9 +386,9 @@ body a, html a {
   background-color: white;
   text-decoration: none;
   color: black;
-  margin: 1rem;
+  margin: 0 1rem 1rem 1rem;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
-  border-radius: 20px;
+  border-radius: 1rem;
 }
 .restaurants__card:hover {
   transform: scale(1.01);
@@ -411,11 +422,11 @@ body a, html a {
   right: 2%;
   top: 1.5%;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
-  border-radius: 5px;
+  border-radius: 0.2rem;
 }
 .card__img {
   object-fit: cover;
-  border-radius: 20px 20px 0 0;
+  border-radius: 1rem 1rem 0 0;
   max-height: 12rem;
   width: 100%;
 }
@@ -434,26 +445,34 @@ body a, html a {
     max-height: 15rem;
   }
 }
+.card__content {
+  flex: 1;
+}
 .card__footer {
-  padding-left: 1rem;
+  display: flex;
+  padding: 1rem;
+  align-items: center;
 }
 .card__footer h3 {
-  margin-bottom: 6px;
+  margin: 0;
 }
-@media only screen and (min-width: 1024px) and (max-width: 1199px) {
-  .card__footer h3 {
-    margin-top: 0.8rem;
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .card__title {
+    margin: 0 0 0.25rem;
   }
 }
 .card__subtitle {
   padding-bottom: 0;
   border: 0;
 }
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .card__subtitle {
+    margin: 0;
+  }
+}
 .card__btn {
   float: right;
-  position: relative;
-  bottom: 3rem;
-  right: 2rem;
+  display: flex;
 }
 .card__btn__like {
   cursor: pointer;
@@ -538,11 +557,6 @@ body a, html a {
   }
 }
 
-@media only screen and (min-width: 240px) and (max-width: 319px) {
-  .menu {
-    font-size: 12px;
-  }
-}
 .menu__container {
   background-color: #F6F6F6;
   display: flex;
@@ -602,12 +616,6 @@ body a, html a {
 .menu__items:hover .menu__items__checked {
   animation: checked-btn-anim 0.45s ease-in both;
 }
-.menu__items:hover {
-  transform: scale(1.01);
-  -webkit-transition: 0.4s;
-  -o-transition: 0.4s;
-  transition: 0.4s;
-}
 .menu__items__text {
   flex: 1;
   display: flex;
@@ -625,19 +633,19 @@ body a, html a {
 }
 .menu__items__desc {
   margin: 0;
-  font-size: 16px;
+  font-size: 1.3vw;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 @media only screen and (min-width: 240px) and (max-width: 319px) {
   .menu__items__desc {
-    font-size: 10px;
+    font-size: 4.4vw;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
   .menu__items__desc {
-    font-size: 20px;
+    font-size: 4.2vw;
   }
 }
 .menu__items__price {
@@ -663,7 +671,7 @@ body a, html a {
   align-items: center;
   color: #99E2D0;
   background-color: white;
-  border-radius: 100px;
+  border-radius: 5rem;
 }
 
 .command {
