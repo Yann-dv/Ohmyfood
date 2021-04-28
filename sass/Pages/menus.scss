@@ -90,6 +90,10 @@
             @include mini-up {
                 font-size: 4.4vw;
             }
+
+            @include smart-up {
+                font-size: 4.2vw;
+            }
         
             @include tablet-up {
                 font-size: 4.2vw;
