@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+@import url('https://kit.fontawesome.com/158c254b57.js" crossorigin="anonymous');
+/*Colors chart*/
+/*Loader*/
+/*Images sizes*/
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -2;
+  }
+}
+@keyframes bars {
+  0% {
+    transform: scaleY(0);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+}
+.local {
+  text-align: center;
+  background-color: #EAEAEA;
+  padding: 0.7rem;
+  box-shadow: inset 0px 3px 2px rgba(0, 0, 0, 0.25);
+}
+
+.reserve {
+  background-color: #F6F6F6;
+  text-align: center;
+  padding: 1rem;
+  padding-bottom: 3rem;
+}
+.reserve p {
+  margin-bottom: 2.5rem;
+}
+.reserve__button {
+  border: 0;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-radius: 100px;
+  color: white;
+  background-color: #686868;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9) 0%, rgba(255, 121, 218, 0.9) 100%);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+}
+.reserve__button:hover {
+  background-color: white;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+}
+.reserve__button a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.instruct ol {
+  list-style: none;
+  counter-reset: li;
+}
+.instruct li::before {
+  content: counter(li);
+  color: white;
+  background-color: #9356DC;
+  border-radius: 100px;
+  display: flex;
+  width: 1.5rem;
+  height: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: -0.75rem;
+}
+.instruct li {
+  counter-increment: li;
+}
+.instruct__icon {
+  display: flex;
+  padding-right: 1rem;
+  align-items: center;
+  justify-content: center;
+  color: #7E7E7E;
+  margin-top: 0.2rem;
+}
+.instruct__text {
+  margin-top: 0.1rem;
+}
+.instruct__step {
+  cursor: pointer;
+  display: flex;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+  border-radius: 20px;
+  background-color: #F6F6F6;
+  padding: 1.5rem 1.5rem 1.5rem 0;
+  margin-right: 1rem;
+  margin-top: 1rem;
+}
+.instruct__step:hover {
+  background-color: #f5edff;
+}
+.instruct__step:hover > .instruct__icon {
+  color: #9356DC;
+}
+
+.restaurants {
+  background-color: #F6F6F6;
+  display: flex;
+  flex-direction: column;
+}
+.restaurants__card {
+  position: relative;
+  background-color: white;
+  text-decoration: none;
+  color: black;
+  margin: 1rem;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+  border-radius: 20px;
+}
+
+.card__badge {
+  background-color: #99E2D0;
+  color: #008766;
+  margin: 1rem;
+  padding: 0.5rem;
+  position: absolute;
+  right: 2%;
+  top: 1.5%;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+  border-radius: 5px;
+}
+.card__img {
+  border-radius: 20px 20px 0 0;
+  max-height: 80%;
+  max-width: 100%;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  color: white;
+  background-color: #353535;
+  margin: auto;
+}
+.footer__logo {
+  font-family: "Shrikhand", "cursive";
+  font-size: 1.2rem;
+  margin: 0.5rem 0 1rem 0.3rem;
+}
+.footer__logo--lefted {
+  text-align: left;
+}
+.footer__list {
+  list-style: none;
+  width: 100%;
+  margin: 0.4rem;
+}
+.footer__icon {
+  width: 1.2rem;
+  margin-right: 0.5rem;
+}
+.footer__link {
+  color: #fff;
+  text-decoration: none;
+}
+.footer__link :visited {
+  color: white;
+}
+.footer__link :hover {
+  text-decoration: underline;
+}
+
+body, html {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+  font-size: 18px;
+}
+body a, html a {
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.header__logo {
+  font-family: "Shrikhand", "cursive";
+  color: black;
+  text-align: center;
+}
+.header__arrow {
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  font-size: 20px;
+  color: black;
+}
+
+.instruct, .restaurants {
+  padding-bottom: 4rem;
+}
+.instruct h2, .restaurants h2 {
+  padding: 1rem;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+  padding-top: 200px;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  animation: loader 0.01s both 2500ms;
+  background-color: rgba(255, 255, 255, 0.952);
+}
+
+.load {
+  display: flex;
+  width: 20vh;
+  height: 10vh;
+  justify-content: space-evenly;
+}
+.load__bar {
+  height: 100%;
+  width: 2.5vh;
+  border-radius: 50px;
+  animation: bars 1500ms both 1 ease-in-out alternate;
+}
+.load__bar--1 {
+  background-color: #9356DC;
+  animation-delay: 166.6666666667ms;
+}
+.load__bar--2 {
+  background-color: #9356DC;
+  animation-delay: 333.3333333333ms;
+}
+.load__bar--3 {
+  background-color: #FF79DA;
+  animation-delay: 500ms;
+}
+.load__bar--4 {
+  background-color: #FF79DA;
+  animation-delay: 666.6666666667ms;
+}
+.load__bar--5 {
+  background-color: #99E2D0;
+  animation-delay: 833.3333333333ms;
+}
+.load__bar--6 {
+  background-color: #99E2D0;
+  animation-delay: 1000ms;
+}

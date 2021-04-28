@@ -3,10 +3,27 @@ $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
 $bkgdgrey: #F6F6F6;
-$bkgdlocal: #eaeaea;
+$bkgdlocal: #EAEAEA;
 $instructicon: #7E7E7E;
 /*Loader*/
 $loadbarsize: 2.5vh;
 $num-loadbars: 9;
-$loader-dur: 1500ms;
+$loader-dur: 1200ms;
 $loadbar-delay: $loader-dur / $num-loadbars;
+/*Images sizes*/
+$imgheight: 12rem;
+$imgwidth: 100%;
+/*Breakpoints*/
+$breakpoints-min: (
+  mini: 240px,
+  smart: 320px,
+  tablet: 768px,
+  desktop: 1024px,
+  dlarge: 1200px
+);
+$breakpoints-max: (
+  minix: 319px,
+  smartx: 767px,
+  tabletx: 1023px,
+  desktopx: 1199px,
+);

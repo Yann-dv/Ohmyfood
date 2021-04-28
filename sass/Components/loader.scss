@@ -1,4 +1,4 @@
-.loader{
+.loader {
     display: flex;
     justify-content: center;
     z-index: 10;
@@ -8,37 +8,41 @@
     position: fixed;
     left: 0;
     top: 0;
-    animation: loader 0.01s both 2500ms;
+    animation: loader 0.01s both 2000ms;
     background-color: rgba(255, 255, 255, 0.952);
 }
 
-.load{
+.load {
     display: flex;
     width: $loadbarsize*8;
     height: $loadbarsize*4;
     justify-content: space-evenly;
-    &__bar{
+
+    &__bar {
         height: 100%;
         width: $loadbarsize;
         border-radius: 50px;
         animation: bars $loader-dur both 1 ease-in-out alternate;
-      @for $i from 1 through 2 {
+
+        @for $i from 1 through 2 {
             &--#{$i} {
                 background-color: $primary-color;
                 animation-delay: $loadbar-delay * $i;
-             }
+            }
         }
+
         @for $i from 3 through 4 {
             &--#{$i} {
                 background-color: $secondary-color;
                 animation-delay: $loadbar-delay * $i;
-             }
+            }
         }
+
         @for $i from 5 through 6 {
             &--#{$i} {
                 background-color: $tertiary-color;
                 animation-delay: $loadbar-delay * $i;
-             }
+            }
         }
     }
 }

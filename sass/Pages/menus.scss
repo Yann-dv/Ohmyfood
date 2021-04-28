@@ -1,0 +1,137 @@
+.shrikfont {
+    font-family: "Shrikhand", "cursive";
+}
+
+.upper {
+    position: relative;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding-bottom: .5rem;
+
+    &::after {
+        content: "";
+        width: 3rem;
+        height: 0.25rem;
+        background-color: $tertiary-color;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+.menu__btn {
+    float: right;
+    position: relative;
+    top: -3rem;
+    right: 2rem;
+    @include like;
+    @include mini-up {
+        right: .5rem;
+    }
+    @include smart-up {
+        right: 1rem;
+    }
+}
+
+.menu {
+    &__container {
+        background-color: $bkgdgrey;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        border-radius: 2rem 2rem 0 0;
+        margin-top: -4rem;
+        z-index: 2;
+
+    }
+
+    &__items {
+        @for $i from 1 through 10 {
+            &.menu--#{$i} {
+                animation-delay: #{$i/7}s;
+            }
+        }
+
+        opacity: 0;
+        animation: menu-appear 1.5s cubic-bezier(.5, 1.58, .34, .82) both;
+
+        position: relative;
+        background-color: #fff;
+        padding: 1rem;
+        display: flex;
+        max-width: 100%;
+        border-radius: .75rem;
+        margin: 1rem 0;
+        box-shadow: .25rem .25rem 1rem rgba(0, 0, 0, .1);
+        overflow: hidden;
+        cursor: pointer;
+        @include checked-btn;
+
+        &__text {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        &__name {
+            padding-bottom: .5rem;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        &__desc {
+            margin: 0;
+            font-size: 1.3vw;
+            @include mini-up {
+                font-size: 4.4vw;
+            }
+        
+            @include tablet-up {
+                font-size: 4.2vw;
+            }
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        &__price {
+            display: flex;
+            width: 2rem;
+            font-weight: bold;
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+
+        &__checking {
+            background-color: $tertiary-color;
+            width: 4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: -1rem -5rem -1rem 1rem;
+        }
+
+        &__checked {
+            width: 1.5rem;
+            height: 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $tertiary-color;
+            background-color: white;
+            border-radius: 5rem;
+
+        }
+    }
+}
+
+.command {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 2rem 4rem;
+}

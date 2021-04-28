@@ -2,13 +2,13 @@
 
 @mixin button($type) {
   border: 0;
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 2rem;
   font-weight: 500;
   font-size: 1.1rem;
-  border-radius: 100px;
+  border-radius: 5rem;
   color: white;
   background-color: rgb(104, 104, 104);
-  background-image: linear-gradient(0deg, color.scale($primary-color, $alpha: -10%) 0%, color.scale($secondary-color, $alpha: -10%) 100%);
+  background-image: linear-gradient(0deg, color.scale($secondary-color, $alpha: -10%) 0%, color.scale($primary-color, $alpha: -10%) 100%);
   cursor: pointer;
   transition-duration: 0.3s;
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
@@ -24,11 +24,87 @@
   }
 }
 
-@mixin hover($color) {
-  @if (hue($color) < 180){
-    $color: adjust-hue($color, 30);
-  }@else{
-    $color: adjust-hue($color, -60);
+@mixin checked-btn {
+  &:hover {
+    .menu__items__checking {
+      animation: checking-btn-anim .4s ease-in both;
+    }
+
+    .menu__items__checked {
+      animation: checked-btn-anim .45s ease-in both;
+    }
   }
-  background-color: $color;
+}
+
+@mixin scale01 {
+  &:hover {
+    transform: scale(1.01);
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+  }
+}
+
+@mixin itemslayout {
+  box-shadow: .25rem .25rem .5rem rgba(0, 0, 0, .125);
+  border-radius: 1rem;
+}
+
+@mixin pinkgradient {
+  background: -webkit-linear-gradient(color.scale($primary-color, $alpha: -10%) 0%, color.scale($secondary-color, $alpha: -10%) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin like {
+  &__like {
+    cursor: pointer;
+
+    &::before {
+      content: "";
+    }
+
+    &:hover:before {
+      font-weight: bold;
+      transition-duration: .7s;
+      @include pinkgradient;
+    }
+
+    &:active {
+      font-weight: 600;
+      transition-duration: .1s;
+      @include pinkgradient;
+    }
+  }
+}
+
+/*Media queries*/
+@mixin mini-up {
+  @media only screen and (min-width: map-get($breakpoints-min, mini)) and (max-width: map-get($breakpoints-max, minix)) {
+    @content;
+  }
+}
+
+@mixin smart-up {
+  @media only screen and (min-width: map-get($breakpoints-min, smart)) and (max-width: map-get($breakpoints-max, smartx)) {
+    @content;
+  }
+}
+
+@mixin tablet-up {
+  @media only screen and (min-width: map-get($breakpoints-min, tablet)) and (max-width: map-get($breakpoints-max, tabletx)) {
+    @content;
+  }
+}
+
+@mixin desktop-up {
+  @media only screen and (min-width: map-get($breakpoints-min, desktop)) and (max-width: map-get($breakpoints-max, desktopx)) {
+    @content;
+  }
+}
+
+@mixin dlarge-up {
+  @media only screen and (min-width: map-get($breakpoints-min, dlarge)) {
+    @content;
+  }
 }

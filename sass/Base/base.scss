@@ -1,29 +1,47 @@
-body,html {
+body,
+html {
     box-sizing: border-box;
     margin: 0;
     font-family: 'Roboto', sans-serif;
     scroll-behavior: smooth;
-    font-size: 18px;
-    & a{
-        text-decoration: none;
-        }
-}
+    /*Responsive font - auto resizing*/
+    font-size: 1.4vw;
 
-.hidden{
-    display: none;
-}
-.header{
-    &__logo{
-    font-family: "Shrikhand", "cursive";
-    color: black;
-    text-align: center;
+    @include mini-up {
+        font-size: 4.5vw;
     }
 
-    &__arrow{
-        position:absolute;
-        left: 5%;
-        top: 5%;
-        font-size: 20px;
+    @include smart-up {
+        font-size: 4.3vw;
+    }
+
+    @include tablet-up {
+        font-size: 4.3vw;
+    }
+
+    & a {
+        text-decoration: none;
         color: black;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.instruct,
+.restaurants {
+    padding-bottom: 3rem;
+
+    & h2 {
+        padding: 1rem 0 0 1rem;
+
+        @include desktop-up {
+            width: 100%;
+        }
+
+        @include dlarge-up {
+            width: 100%;
+        }
     }
 }
