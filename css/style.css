@@ -65,6 +65,10 @@
 .footer__logo--lefted {
   text-align: left;
 }
+.footer__ul {
+  padding-left: 0;
+  margin-top: 0;
+}
 .footer__list {
   list-style: none;
   width: 100%;
