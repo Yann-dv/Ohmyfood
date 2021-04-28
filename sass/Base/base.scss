@@ -1,0 +1,47 @@
+body,
+html {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+    /*Responsive font - auto resizing*/
+    font-size: 1.4vw;
+
+    @include mini-up {
+        font-size: 4.5vw;
+    }
+
+    @include smart-up {
+        font-size: 4.3vw;
+    }
+
+    @include tablet-up {
+        font-size: 4.3vw;
+    }
+
+    & a {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.instruct,
+.restaurants {
+    padding-bottom: 3rem;
+
+    & h2 {
+        padding: 1rem 0 0 1rem;
+
+        @include desktop-up {
+            width: 100%;
+        }
+
+        @include dlarge-up {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,217 @@
+.local {
+    text-align: center;
+    background-color: $bkgdlocal;
+    padding: .7rem;
+    box-shadow: inset 0px 3px 2px rgba(0, 0, 0, .25);
+}
+
+.reserve {
+    background-color: $bkgdgrey;
+    text-align: center;
+    padding: 1rem;
+    padding-bottom: 3rem;
+
+    & p {
+        margin-bottom: 2.5rem;
+    }
+
+    &__button {
+        @include button($primary-color);
+    }
+}
+
+.instruct {
+    @include desktop-up {
+        flex-direction: row;
+    }
+    @include dlarge-up {
+        flex-direction: row;
+    }
+
+    & ol {
+        list-style: none;
+        counter-reset: li;
+    }
+
+    & li::before {
+        content: counter(li);
+        color: white;
+        background-color: $primary-color;
+        border-radius: 100px;
+        display: flex;
+        width: 1.5rem;
+        height: 1.5rem;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        left: -.75rem;
+    }
+
+    & li {
+        counter-increment: li;
+        border-radius: 1.25rem;
+    }
+
+    &__icon {
+        display: flex;
+        padding-right: 1rem;
+        align-items: center;
+        justify-content: center;
+        color: $instructicon;
+        margin-top: .2rem;
+    }
+
+    &__text {
+        margin-top: .1rem;
+    }
+
+    &__steps {
+        @include desktop-up {
+            display: flex;
+        }
+        @include dlarge-up {
+            display: flex;
+        }
+    }
+
+    &__step {
+        cursor: pointer;
+        display: flex;
+        @include itemslayout;
+        background-color: $bkgdgrey;
+        padding: 1.5rem 1.5rem 1.5rem 0;
+        margin-right: 1rem;
+        margin-top: 1rem;
+
+        @include desktop-up {
+            padding: 1rem 1rem 1rem 0;
+            margin-right: 1.5rem;
+            width: 30%;
+        }
+        @include dlarge-up {
+            padding: 1rem 1rem 1rem 0;
+            margin-right: 1.5rem;
+            width: 30%;
+        }
+
+        &:hover {
+            background-color: #f5edff;
+
+            &>.instruct__icon {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+.restaurants {
+    background-color: $bkgdgrey;
+    display: flex;
+    flex-direction: column;
+
+    @include desktop-up {
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    @include dlarge-up {
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    &__card {
+        position: relative;
+        background-color: white;
+        text-decoration: none;
+        color: black;
+        margin: 0 1rem 1rem 1rem;
+        @include itemslayout;
+        @include scale01;
+
+        @include desktop-up {
+            width: 45%;
+            height: 15rem;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        @include dlarge-up {
+            width: 45%;
+            height: 20rem;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+    }
+}
+
+.card {
+    &__badge {
+        background-color: $tertiary-color;
+        color: darken($tertiary-color, 50%);
+        margin: .5rem;
+        padding: .5rem;
+        position: absolute;
+        right: 2%;
+        top: 1.5%;
+        box-shadow: .25rem .25rem .5rem rgba(0, 0, 0, .125);
+        border-radius: .2rem;
+    }
+
+    &__img {
+        object-fit: cover;
+        border-radius: 1rem 1rem 0 0;
+        max-height: $imgheight;
+        width: $imgwidth;
+
+        @include tablet-up {
+            max-height: 14rem;
+        }
+
+        @include desktop-up {
+            max-height: 65%;
+        }
+
+        @include dlarge-up {
+            max-height: 15rem;
+        }
+    }
+    &__content {
+        flex: 1;
+    }
+
+    &__footer {
+        display: flex;
+        padding: 1rem;
+        align-items: center;
+
+        & h3 {
+            margin: 0;
+        }
+    }
+
+    &__title {
+        @include smart-up {
+            margin: 0 0 .25rem;
+        }
+    }
+
+    &__subtitle {
+        padding-bottom: 0;
+        border: 0;
+        @include smart-up {
+            margin: 0;
+        }
+    }
+
+    &__btn {
+        float: right;
+        display: flex;
+        @include like;
+
+        @include mini-up {
+            right: 1rem;
+        }
+    }
+}

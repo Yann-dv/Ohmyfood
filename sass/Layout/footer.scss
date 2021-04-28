@@ -1,0 +1,39 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    color: white;
+    background-color: rgb(53, 53, 53);
+    margin: auto;
+    &__logo{
+        font-family: "Shrikhand", "cursive";
+        font-size: 1.2rem;
+        margin: .5rem 0 1rem .3rem;
+        &--lefted{
+            text-align: left;
+        }
+    }
+    &__ul {
+        padding-left: 0;
+        margin-top: 0;
+    }
+    &__list{
+        list-style: none;
+        width: 100%;
+        margin: .4rem;
+    }
+    &__icon{
+        width: 1.2rem;
+        margin-right: .5rem;
+    }
+    &__link{
+        color: #fff;
+        text-decoration: none;
+        & :visited{
+            color: white;
+        }
+        & :hover{
+            text-decoration: underline;
+        }
+    }
+}
