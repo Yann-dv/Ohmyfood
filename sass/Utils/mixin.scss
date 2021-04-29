@@ -45,12 +45,12 @@
   }
 }
 
-@mixin itemslayout {
+@mixin items-layout {
   box-shadow: .25rem .25rem .5rem rgba(0, 0, 0, .125);
   border-radius: 1rem;
 }
 
-@mixin pinkgradient {
+@mixin pink-gradient {
   background: -webkit-linear-gradient(color.scale($primary-color, $alpha: -10%) 0%, color.scale($secondary-color, $alpha: -10%) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -67,13 +67,13 @@
     &:hover:before {
       font-weight: bold;
       transition-duration: .7s;
-      @include pinkgradient;
+      @include pink-gradient;
     }
 
     &:active {
       font-weight: 600;
       transition-duration: .1s;
-      @include pinkgradient;
+      @include pink-gradient;
     }
   }
 }

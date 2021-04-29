@@ -1,5 +1,11 @@
 .shrikfont {
     font-family: "Shrikhand", "cursive";
+    @include desktop-up {
+        margin-left: 6rem;
+    }
+    @include dlarge-up {
+        margin-left: 6rem;
+    }
 }
 
 .upper {
@@ -7,6 +13,12 @@
     font-weight: 400;
     text-transform: uppercase;
     padding-bottom: .5rem;
+    @include desktop-up {
+        margin-left: 6rem;
+    }
+    @include dlarge-up {
+        margin-left: 6rem;
+    }
 
     &::after {
         content: "";
@@ -30,6 +42,12 @@
     }
     @include smart-up {
         right: 1rem;
+    }
+    @include desktop-up {
+        right: 6rem;
+    }
+    @include dlarge-up {
+        right: 6rem;
     }
 }
 
@@ -62,6 +80,12 @@
         max-width: 100%;
         border-radius: .75rem;
         margin: 1rem 0;
+        @include desktop-up {
+            margin: 1.5rem 6rem 0;
+        }
+        @include dlarge-up {
+            margin: 1.5rem 6rem 0;
+        }
         box-shadow: .25rem .25rem 1rem rgba(0, 0, 0, .1);
         overflow: hidden;
         cursor: pointer;
