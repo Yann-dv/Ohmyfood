@@ -23,6 +23,17 @@
     @include tablet-up {
         font-size: 4.3vw;
     }
+    @include mini-up-land {
+        font-size: 2.5vw;
+    }
+
+    @include smart-up-land {
+        font-size: 2.3vw;
+    }
+
+    @include tablet-up-land {
+        font-size: 3.3vw;
+    }
     }
 }
 

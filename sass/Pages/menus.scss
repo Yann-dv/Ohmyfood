@@ -111,6 +111,9 @@
         &__desc {
             margin: 0;
             font-size: 1.3vw;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
             @include mini-up {
                 font-size: 4.4vw;
             }
@@ -120,11 +123,19 @@
             }
         
             @include tablet-up {
-                font-size: 4.2vw;
+                font-size: 3.2vw;
             }
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            @include mini-up-land {
+                font-size: 2.4vw;
+            }
+
+            @include smart-up-land {
+                font-size: 2.2vw;
+            }
+        
+            @include tablet-up-land {
+                font-size: 2.2vw;
+            }
         }
 
         &__price {

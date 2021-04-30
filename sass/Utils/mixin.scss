@@ -85,14 +85,31 @@
   }
 }
 
-@mixin smart-up {
+@mixin mini-up-land {
+  @media only screen and (min-width: map-get($breakpoints-min, mini)) and (max-width: map-get($breakpoints-max, minix)) and (orientation:landscape)  {
+    @content;
+  }
+}
+
+@mixin smart-up{
   @media only screen and (min-width: map-get($breakpoints-min, smart)) and (max-width: map-get($breakpoints-max, smartx)) {
+    @content;
+  }
+}
+@mixin smart-up-land{
+  @media only screen and (min-width: map-get($breakpoints-min, smart)) and (max-width: map-get($breakpoints-max, smartx)) and (orientation:landscape) {
     @content;
   }
 }
 
 @mixin tablet-up {
   @media only screen and (min-width: map-get($breakpoints-min, tablet)) and (max-width: map-get($breakpoints-max, tabletx)) {
+    @content;
+  }
+}
+
+@mixin tablet-up-land {
+  @media only screen and (min-width: map-get($breakpoints-min, tablet)) and (max-width: map-get($breakpoints-max, tabletx)) and (orientation:landscape) {
     @content;
   }
 }
