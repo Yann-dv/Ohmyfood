@@ -36,6 +36,6 @@ Html/css only
 
 * Maquette : 
 
-![Accueil](https://user-images.githubusercontent.com/79877110/136532677-d8e613f9-867d-4d57-88a9-73d8363cf144.png)![Menu - La palette du goût](https://user-images.githubusercontent.com/79877110/136532774-979978e0-414e-4b8b-9a5a-eb6017ad9db8.png)
+![Accueil](https://user-images.githubusercontent.com/79877110/136532677-d8e613f9-867d-4d57-88a9-73d8363cf144.png)   ![Menu - La palette du goût](https://user-images.githubusercontent.com/79877110/136532774-979978e0-414e-4b8b-9a5a-eb6017ad9db8.png)
 
 
