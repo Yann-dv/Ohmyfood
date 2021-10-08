@@ -1,7 +1,7 @@
 # YannHagege_3_13042021
 Website creation - ohmyfood project
 
-Création d'un site Mobile first pour une société d'avis gastronomiques.
+Création d'un site Mobile first pour une société de réservations de menus parmis un choix de restaurants.
 Html/css only
 
 * Identité graphique : 
